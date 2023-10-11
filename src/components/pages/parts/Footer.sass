@@ -1,0 +1,40 @@
+$background-color: #500a2e
+.footer
+  color: white
+  height: 200px
+  width: 100vw
+  background-color: $background-color
+  display: flex
+  justify-content: space-between
+  padding: 20px
+  position: absolute
+  bottom: 0
+  left: 0
+  right: 0
+
+.footer-column
+  flex: 1
+  padding: 10px
+  text-align: left
+
+  h2
+    font-size: 1.2rem
+
+  ul
+    list-style: none
+    padding: 0
+    li
+      margin: 5px 0
+      a
+        color: white
+        text-decoration: none
+  address
+    font-style: normal
+
+@media screen and (max-width: 768px)
+  .footer
+    flex-direction: column
+    height: auto
+    justify-content: center
+    .footer-column
+      width: 300px

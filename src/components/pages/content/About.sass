@@ -1,0 +1,64 @@
+$background-color: #fce2ef
+$text-color: #500a2e
+
+$min-title-size: 40px
+$max-title-size: 60px
+
+$min-font-size: 14px
+$max-font-size: 30px
+
+body
+    background: $background-color
+
+.content-wrapper
+    width: 100%
+    display: flex
+    justify-content: center
+    color: #4f0a2d
+
+.content
+    width: 75vw
+    font-size: clamp($min-font-size, calc(1rem + 1vw), $max-font-size)
+
+.text-container 
+    overflow: hidden
+    white-space: nowrap
+    display: flex
+    flex-direction: column
+
+
+.text 
+    width: 0
+    overflow: hidden
+    white-space: nowrap
+    animation: none
+    margin: 5px 0 /* Add some spacing between lines */
+
+
+.text-write 
+    animation: text-write 1s ease forwards
+
+
+@keyframes text-write 
+    to
+        width: 100%
+
+.title
+    font-size: clamp($min-title-size, calc(1rem + 1vw), $max-title-size)
+
+.paragraph
+    position: relative
+    padding: 10px
+    box-shadow: #d776a8 5px 5px 7px
+    border-radius: 10px
+    left: 0
+    bottom: 0
+    margin-bottom: 20px
+    transition: bottom 0.2s ease, left 0.2s ease
+
+.paragraph:hover
+    left: -8px
+    bottom: -8px
+
+.movedDown
+    margin-top: 220px
